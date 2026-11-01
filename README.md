@@ -8,5 +8,5 @@ brew install zapotylok/diskmap/diskmap
 ```
 
 The formula builds diskmap from source on your Mac: the `diskmap` command and the window,
-`diskmap.app`. It needs macOS 26 on Apple silicon. See the
+`diskmap.app`. It needs Apple silicon and macOS 15 or later (tested on 26). See the
 [diskmap README](https://github.com/zapotylok/diskmap#install) for the rest.

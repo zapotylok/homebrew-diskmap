@@ -5,12 +5,12 @@
 class Diskmap < Formula
   desc "Partition map and layout planner for external drives on macOS"
   homepage "https://github.com/zapotylok/diskmap"
-  url "https://github.com/zapotylok/diskmap/archive/refs/tags/v2026.1101.tar.gz"
-  sha256 "6f00f3ea7fb927668d68eb43e499998eb8995308ea3db248944f478e295b79c6"
+  url "https://github.com/zapotylok/diskmap/archive/refs/tags/v2026.1101.2.tar.gz"
+  sha256 "fec617d6bd2d354918c964cf2af346d30f98dee8d5fadea08b53c6909231379a"
   license "MIT"
 
   depends_on arch: :arm64
-  depends_on macos: :tahoe
+  depends_on macos: :sequoia # K19: tested on macOS 26 only; elsewhere every plan says so first
   depends_on "python@3.14"
 
   def python3

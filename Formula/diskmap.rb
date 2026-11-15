@@ -5,8 +5,8 @@
 class Diskmap < Formula
   desc "Partition map and layout planner for external drives on macOS"
   homepage "https://github.com/zapotylok/diskmap"
-  url "https://github.com/zapotylok/diskmap/archive/refs/tags/v2026.1102.tar.gz"
-  sha256 "3270254b012fef672aff291cc4cbb9a9473107478968199c78756fac48cdb03a"
+  url "https://github.com/zapotylok/diskmap/archive/refs/tags/v2026.1115.tar.gz"
+  sha256 "a51c978178545e3d16c8da7dc1af257a130641716f8130c72dc55f12ead8ceda"
   license "MIT"
 
   depends_on arch: :arm64
@@ -49,6 +49,12 @@ class Diskmap < Formula
       It copies the window into /Applications (or ~/Applications). The copy runs
       #{opt_bin}/diskmap, so after `brew upgrade` it runs the new version; run
       install-app again for a newer window.
+
+      NTFS and ext4 need a formatter diskmap does not install: mke2fs from
+      `brew install e2fsprogs`, mkntfs from ntfs-3g, or Paragon's extFS or NTFS for Mac.
+      macOS itself mounts NTFS read-only and ext4 not at all. Formats… in the window (or
+      `diskmap doctor`) shows what this Mac can create, what it then mounts, and how to
+      install what is missing.
 
       diskmap only reads until you apply a plan: writing is `sudo diskmap apply …` in Terminal,
       which the window opens for you. Back up the files on a disk before writing to it.

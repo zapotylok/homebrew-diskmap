@@ -5,8 +5,8 @@
 class Diskmap < Formula
   desc "Partition map and layout planner for external drives on macOS"
   homepage "https://github.com/zapotylok/diskmap"
-  url "https://github.com/zapotylok/diskmap/archive/refs/tags/v2026.1115.tar.gz"
-  sha256 "a51c978178545e3d16c8da7dc1af257a130641716f8130c72dc55f12ead8ceda"
+  url "https://github.com/zapotylok/diskmap/archive/refs/tags/v2026.1116.tar.gz"
+  sha256 "ef96534d27d654186d306eb8a6f05691cf797cc6ee0556d7cfad1d73b5ab3a0b"
   license "MIT"
 
   depends_on arch: :arm64
@@ -47,8 +47,9 @@ class Diskmap < Formula
       The window is #{opt_prefix}/diskmap.app. To have it in Launchpad and Spotlight:
         diskmap install-app
       It copies the window into /Applications (or ~/Applications). The copy runs
-      #{opt_bin}/diskmap, so after `brew upgrade` it runs the new version; run
-      install-app again for a newer window.
+      #{opt_bin}/diskmap, and after `brew upgrade` it replaces itself with the new
+      window the next time it starts. A copy made by diskmap 2026.1115 or earlier
+      does not: run install-app once more.
 
       NTFS and ext4 need a formatter diskmap does not install: mke2fs from
       `brew install e2fsprogs`, mkntfs from ntfs-3g, or Paragon's extFS or NTFS for Mac.

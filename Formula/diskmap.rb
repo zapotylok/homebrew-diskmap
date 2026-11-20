@@ -5,8 +5,8 @@
 class Diskmap < Formula
   desc "Partition map and layout planner for external drives on macOS"
   homepage "https://github.com/zapotylok/diskmap"
-  url "https://github.com/zapotylok/diskmap/archive/refs/tags/v2026.1116.tar.gz"
-  sha256 "ef96534d27d654186d306eb8a6f05691cf797cc6ee0556d7cfad1d73b5ab3a0b"
+  url "https://github.com/zapotylok/diskmap/releases/download/v2026.1120/diskmap-2026.1120.tar.gz"
+  sha256 "977e575ee7806db7fc6882d352c1b4e275808151ebe0aa06402404712b25b69c"
   license "MIT"
 
   depends_on arch: :arm64
